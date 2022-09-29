@@ -10,9 +10,8 @@ A booking flight rest API that can add flights, get all flights, get a single fl
 
 1. Make sure you have *Node* and *npm* installed.
 2. Create a directory and initialize the project with a *package.json* file
-3. Install express, and create a server.js file to paste the server.js file code there
-4. Create a db.config file and fill in the value for the : url
-5. Run the server using the node server.js command.
+3. Install express, and create a index.js file to paste the index.js file code there
+4. Run the server using the node index.js command.
 
 # Endpoints
 The following endpoints are available on this server 
