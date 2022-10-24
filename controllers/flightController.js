@@ -26,11 +26,11 @@ const addFlight = (req, res) => {
         else flight.id = 0
     }
     else{
-        return res.status(400).json({ msg: "Insufficient data"})
+        return res.status(400).json({ status: "error", msg: "Insufficient data"})
     }
     flights.push(flight)
     writeFlight();
-    res.status(201).json({addedFlight : flight})
+    res.status(201).json({status: "success" ,addedFlight : flight})
 }
 
 const getAllFlights = (req, res) => {
@@ -70,7 +70,7 @@ const updateFlight = (req, res) => {
         return element
     })
     writeFlight();
-    res.status(201).json({updatedFlight: updateFlight})
+    res.status(201).json({status: "success", updatedFlight: updateFlight})
 }
 
 const deleteFlight =  (req, res) => {
@@ -80,7 +80,7 @@ const deleteFlight =  (req, res) => {
     }
     flights.splice(flights.indexOf(deleteFlight), 1)
     writeFlight();
-    res.status(201).json({deletedFlight: deleteFlight})
+    res.status(201).json({status: "success" ,deletedFlight: deleteFlight})
 }
 
 module.exports = {
